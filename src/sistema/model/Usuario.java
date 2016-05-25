@@ -1,6 +1,6 @@
-package br.ucsal.web;
+package sistema.model;
 
-import javax.annotation.Generated;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,6 +13,15 @@ public class Usuario {
 	private Integer id;
 	private String login;
 	private String senha;
+	private String nome;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 	public Integer getId() {
 		return id;

@@ -1,10 +1,10 @@
 <!DOCTYPE html >
 <html>
-<%@page import="br.ucsal.web.Usuario"%>
+<%@page import="sistema.model.Usuario"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
 <title>HOME</title>
-<jsp:useBean id="user" class="br.ucsal.web.Usuario" scope="session" />
+<jsp:useBean id="user" class="sistema.model.Usuario" scope="session" />
 </head>
 <body>
 	Bem vindo,

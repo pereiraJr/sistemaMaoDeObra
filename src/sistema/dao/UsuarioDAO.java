@@ -1,4 +1,4 @@
-package br.ucsal.web;
+package sistema.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.hibernate.Session;
+
+import sistema.model.Usuario;
+import sistema.util.BancoUtil;
 
 public class UsuarioDAO {
 	

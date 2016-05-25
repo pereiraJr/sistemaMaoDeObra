@@ -34,8 +34,15 @@
 
         <property name="hbm2ddl.import_files">arquivo.sql</property>
 
-        <mapping class="br.ucsal.web.Usuario" />
+        <mapping class="sistema.model.Anuncio" />
 
+		<mapping class="sistema.model.Categoria" />
+		
+		<mapping class="sistema.model.Endereco" />
+		
+		<mapping class="sistema.model.Servico" />
+		
+		<mapping class="sistema.model.Usuario" />
     </session-factory>
 
 </hibernate-configuration>
