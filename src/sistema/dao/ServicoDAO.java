@@ -2,7 +2,7 @@ package sistema.dao;
 
 import java.util.List;
 
-import Entidades.Servico;
+import sistema.model.Servico;
 
 public interface ServicoDAO {
 	public boolean adicionarServico(Servico servico);

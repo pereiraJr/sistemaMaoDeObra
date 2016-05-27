@@ -7,10 +7,14 @@ public class Anuncio {
 	private String descricao;
 	private String titulo;
 	private Date data;
-	private Endereco endereço;
+	private String endereço;
 	
-	public Anuncio() {
-		
+	public String getEndereço() {
+		return endereço;
+	}
+
+	public void setEndereço(String endereço) {
+		this.endereço = endereço;
 	}
 
 	public String getDescricao() {
@@ -28,8 +32,6 @@ public class Anuncio {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-
-
 
 	public Date getData() {
 		return data;

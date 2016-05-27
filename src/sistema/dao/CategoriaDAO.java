@@ -1,8 +1,7 @@
 package sistema.dao;
 
 import java.util.List;
-
-import Entidades.Categoria;
+import sistema.model.Categoria;
 
 public interface CategoriaDAO {
 

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import sistema.dao.UsuarioDAO;
+import sistema.dao.AutenticadorDAO;
 import sistema.model.Usuario;
 
 @WebServlet("/Autenticador")
@@ -26,7 +26,7 @@ public class Autenticador extends HttpServlet {
 		String senha = request.getParameter("senha");
 		user.setLogin(login);
 		user.setSenha(senha);
-		UsuarioDAO dao = new UsuarioDAO();
+		AutenticadorDAO dao = new AutenticadorDAO();
 		if (dao.autenticar(user)) {
 			request.getSession().setAttribute("user", user);
 			response.sendRedirect("home.jsp");

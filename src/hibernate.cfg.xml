@@ -38,8 +38,6 @@
 
 		<mapping class="sistema.model.Categoria" />
 		
-		<mapping class="sistema.model.Endereco" />
-		
 		<mapping class="sistema.model.Servico" />
 		
 		<mapping class="sistema.model.Usuario" />

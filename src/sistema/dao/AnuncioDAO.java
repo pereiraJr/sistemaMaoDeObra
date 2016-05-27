@@ -2,7 +2,7 @@ package sistema.dao;
 
 import java.util.List;
 
-import Entidades.Anuncio;
+import sistema.model.Anuncio;
 
 public interface AnuncioDAO {
 	

@@ -44,34 +44,4 @@ public class BancoUtil {
 	public static SessionFactory getFactory() {
 		return sessionFactory;
 	}
-
-	// private static Connection connection;
-	//
-	//
-	// static {
-	// try {
-	// Class.forName("org.hsqldb.jdbc.JDBCDriver");
-	// //connection =
-	// DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/banco", "SA",
-	// "");
-	// connection = DriverManager.getConnection("jdbc:hsqldb:mem:.", "SA", "");
-	//
-	// Statement stmt = connection.createStatement();
-	// stmt.execute("CREATE TABLE USUARIOS ( USUARIO_ID INTEGER IDENTITY, LOGIN
-	// varchar(100) NOT NULL , SENHA varchar(100) NOT NULL ) ;");
-	// stmt.execute("INSERT INTO USUARIOS ( \"LOGIN\", \"SENHA\" ) VALUES
-	// ('user', '1234');");
-	// ResultSet rs = stmt.executeQuery("SELECT * FROM USUARIOS;");
-	// while (rs.next()) {
-	// System.out.println(rs.getString(1));
-	// System.out.println(rs.getString(2));
-	// System.out.println(rs.getString(3));
-	// }
-	//
-	// } catch (Exception e) {
-	// e.printStackTrace();
-	// }
-	// }
-	//
-
 }

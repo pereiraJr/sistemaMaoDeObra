@@ -8,6 +8,6 @@
 </head>
 <body>
 	Bem vindo,
-	<c:out value="${user.login}" />
+	<c:out value="${user.login}"  />
 </body>
 </html>

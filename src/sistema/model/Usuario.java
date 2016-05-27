@@ -10,10 +10,37 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue
-	private Integer id;
+	private Integer usuarioId;
 	private String login;
 	private String senha;
 	private String nome;
+	private String email;
+	private String telefone;
+	private String endereco;
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
 
 	public String getNome() {
 		return nome;
@@ -23,12 +50,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public Integer getId() {
-		return id;
+	public Integer getusuarioId() {
+		return usuarioId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setusuarioId(Integer usuarioId) {
+		this.usuarioId = usuarioId;
 	}
 
 	public String getLogin() {
@@ -46,5 +73,12 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	
+	@Override
+    public String toString() {
+        return "Usuario [usuarioId=" + usuarioId + ", nome=" + nome
+                + ", email=" + email + ", telefone=" + telefone + ", endereco="
+                + endereco + "]";
+    }    
 
 }
