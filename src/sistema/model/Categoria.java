@@ -1,23 +1,23 @@
 package sistema.model;
 
-import javax.persistence.Entity;
+/*import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-@Entity
+*/
+//@Entity
 public class Categoria {
 	
-	@Id
-	@GeneratedValue
-	private Integer id;
+	//@Id
+	//@GeneratedValue
+	private Integer categoriaId;
 	private String nome;
 	
-	public Integer getId() {
-		return id;
+	public Integer getcategoriaId() {
+		return categoriaId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setcategoriaId(Integer categoriaId) {
+		this.categoriaId = categoriaId;
 	}
 	
 	public String getNome() {

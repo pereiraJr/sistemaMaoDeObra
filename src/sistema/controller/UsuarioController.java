@@ -35,7 +35,7 @@ public class UsuarioController extends HttpServlet{
             forward = LISTAR_USUARIO;
             int usuarioId = Integer.parseInt( request.getParameter("usuarioId") );
             dao.excluirUsuario(usuarioId);
-            request.setAttribute("usuario", dao.listarTodosUsuarios() );
+            request.setAttribute("usuarios", dao.listarTodosUsuarios() );
         }
         else if( action.equalsIgnoreCase( "editar" ) ) {
             forward = INSERIR_OU_EDITAR;
@@ -65,11 +65,11 @@ public class UsuarioController extends HttpServlet{
         if( usuarioId == null || usuarioId.isEmpty() )
             dao.adicionarUsuario(usuario);
         else {
-            usuario.setusuarioId( Integer.parseInt(usuarioId) );
+            usuario.setUsuarioId( Integer.parseInt(usuarioId) );
             dao.alterarUsuario(usuario);
         }
         RequestDispatcher view = request.getRequestDispatcher( LISTAR_USUARIO );
-        request.setAttribute("usuario", dao.listarTodosUsuarios());
+        request.setAttribute("usuarios", dao.listarTodosUsuarios());
         view.forward(request, response);
     }
  

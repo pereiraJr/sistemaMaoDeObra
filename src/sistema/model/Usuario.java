@@ -1,18 +1,11 @@
 package sistema.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
 public class Usuario {	
-
-	@Id
-	@GeneratedValue
-	private Integer usuarioId;
-	private String login;
-	private String senha;
+	
+	private int usuarioId;
+	//private String login;
+	//private String senha;
 	private String nome;
 	private String email;
 	private String telefone;
@@ -50,15 +43,15 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public Integer getusuarioId() {
+	public Integer getUsuarioId() {
 		return usuarioId;
 	}
 
-	public void setusuarioId(Integer usuarioId) {
+	public void setUsuarioId(Integer usuarioId) {
 		this.usuarioId = usuarioId;
 	}
 
-	public String getLogin() {
+	/*public String getLogin() {
 		return login;
 	}
 
@@ -72,7 +65,7 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
+	} */
 	
 	@Override
     public String toString() {

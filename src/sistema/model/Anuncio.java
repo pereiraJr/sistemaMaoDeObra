@@ -2,8 +2,16 @@ package sistema.model;
 
 import java.util.Date;
 
+/*import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+*/
+//@Entity
 public class Anuncio {
-
+	
+/*	@Id
+	@GeneratedValue
+*/	private int anuncioId;
 	private String descricao;
 	private String titulo;
 	private Date data;
@@ -39,5 +47,13 @@ public class Anuncio {
 
 	public void setData(Date data) {
 		this.data = data;
+	}
+	
+	public int getAnuncioId() {
+		return anuncioId;
+	}
+
+	public void setAnuncioId(int anuncioId) {
+		this.anuncioId = anuncioId;
 	}
 }

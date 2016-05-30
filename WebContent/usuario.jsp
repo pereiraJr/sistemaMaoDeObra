@@ -12,26 +12,26 @@
     <form action="UsuarioController.do" method="post">
         <fieldset>
             <div>
-                <label for="studentId">ID Usuario </label> <input type="text"
+                <label for="usuarioId">ID Usuario </label> <input type="text"
                     name="usuarioId" value="<c:out value="${usuario.usuarioId}" />"
                     readonly="readonly" placeholder="Student ID" />
             </div>
             <div>
-                <label for="firstName">Nome </label> <input type="text"
+                <label for="nome">Nome </label> <input type="text"
                     name="nome" value="<c:out value="${usuario.nome}" />"
                     placeholder="Primeiro Nome" />
             </div>
             <div>
-                <label for="lastName">Telefone</label> <input type="text"
+                <label for="telefone">Telefone</label> <input type="text"
                     name="telefone" value="<c:out value="${usuario.telefone}" />"
-                    placeholder="telefone" />
+                    placeholder="Telefone" />
             </div>
             <div>
-                <label for="course">Curso</label> <input type="text" name="endereco"
+                <label for="endereco">Endereco</label> <input type="text" name="endereco"
                     value="<c:out value="${usuario.endereco}" />" placeholder="Endereco" />
             </div>
             <div>
-                <label for="year">Email</label> <input type="text" name="email"
+                <label for="email">Email</label> <input type="text" name="email"
                     value="<c:out value="${usuario.email}" />" placeholder="email" />
             </div>
             <div>

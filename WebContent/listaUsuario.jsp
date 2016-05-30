@@ -8,14 +8,14 @@
 <title>Todos os Registros</title>
 </head>
 <body>
-    <table>
+    <table border="1">
         <thead>
             <tr>
-                <th>ID Estudante</th>
-                <th>Primeiro Nome</th>
-                <th>Sobrenome</th>
-                <th>Curso</th>
-                <th>Ano</th>
+                <th>ID Usuario</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Endereco</th>
+                <th>Email</th>
                 <th colspan="2">Action</th>
             </tr>
         </thead>
@@ -28,15 +28,15 @@
                     <td><c:out value="${usuario.endereco}" /></td>
                     <td><c:out value="${usuario.email}" /></td>
                     <td><a
-                        href="UsuarioController.do?action=editar&UsuarioId=<c:out value="${usuario.usuarioId }"/>">Alterar</a></td>
+                        href="UsuarioController.do?action=editar&usuarioId=<c:out value="${usuario.usuarioId }"/>">Alterar</a></td>
                     <td><a
-                        href="UsuarioController.do?action=deletar&UsuarioId=<c:out value="${usuario.usuarioId }"/>">Deletar</a></td>
+                        href="UsuarioController.do?action=deletar&usuarioId=<c:out value="${usuario.usuarioId }"/>">Deletar</a></td>
                 </tr>
             </c:forEach>
         </tbody>
     </table>
     <p>
-        <a href="UsuarioController.do?action=inserir">Adicionar Estudante</a>
+        <a href="UsuarioController.do?action=inserir">Adicionar Usuario</a>
     </p>
 </body>
 </html>

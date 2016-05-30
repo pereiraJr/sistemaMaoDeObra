@@ -7,6 +7,6 @@
 <title>Bem Vindo</title>
 </head>
 <body>
-    <jsp:forward page="/Usuario?action=listarUsuario"></jsp:forward>
+    <jsp:forward page="/UsuarioController?action=listarUsuario"></jsp:forward>
 </body>
 </html>

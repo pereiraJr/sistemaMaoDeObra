@@ -6,8 +6,8 @@ import sistema.model.Usuario;
 
 public interface UsuarioDAO {
 	public void adicionarUsuario(Usuario usuario);
-	public void excluirUsuario(Integer usuarioId);
-	public List<Usuario> listarTodosUsuarios();
+	public void excluirUsuario(int  usuarioId);
 	public void alterarUsuario(Usuario usuario);
-	public Usuario buscarUsuarioPorId(Integer usuarioId);
+	public List<Usuario> listarTodosUsuarios();
+	public Usuario buscarUsuarioPorId(int usuarioId);
 }

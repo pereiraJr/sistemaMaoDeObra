@@ -1,18 +1,17 @@
 package sistema.model;
 
-
+/*import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+*/
+//@Entity
 public class Servico {
+	
+	//@Id
+	//@GeneratedValue
+	private int servicoId;
 	private String nome;
 	private String preco;
-	private Categoria tipoCategoria;
-	
-	public Categoria getTipoCategoria() {
-		return tipoCategoria;
-	}
-
-	public void setTipoCategoria(Categoria tipoCategoria) {
-		this.tipoCategoria = tipoCategoria;
-	}
 
 	public String getNome() {
 		return nome;
@@ -27,5 +26,12 @@ public class Servico {
 		this.preco = preco;
 	}
 	
+	public int getServicoId() {
+		return servicoId;
+	}
+
+	public void setServicoId(int servicoId) {
+		this.servicoId = servicoId;
+	}
 	
 }
