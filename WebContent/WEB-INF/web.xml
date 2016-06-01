@@ -8,8 +8,19 @@
     <servlet-name>UsuarioController</servlet-name>
     <servlet-class>sistema.controller.UsuarioController</servlet-class>
   </servlet>
+
+  <servlet>
+    <servlet-name>AutenticadorController</servlet-name>
+    <servlet-class>sistema.controller.Autenticador</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>UsuarioController</servlet-name>
     <url-pattern>/UsuarioController.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>AutenticadorController</servlet-name>
+    <url-pattern>/AutenticadorController.do</url-pattern>
   </servlet-mapping>
 </web-app>

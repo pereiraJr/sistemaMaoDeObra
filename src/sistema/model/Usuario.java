@@ -4,8 +4,8 @@ package sistema.model;
 public class Usuario {	
 	
 	private int usuarioId;
-	//private String login;
-	//private String senha;
+	private String login;
+	private String senha;
 	private String nome;
 	private String email;
 	private String telefone;
@@ -51,7 +51,7 @@ public class Usuario {
 		this.usuarioId = usuarioId;
 	}
 
-	/*public String getLogin() {
+	public String getLogin() {
 		return login;
 	}
 
@@ -65,7 +65,7 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
-	} */
+	} 
 	
 	@Override
     public String toString() {
