@@ -1,3 +1,0 @@
-# sistemaMaoDeObra
-
-Trabalho Acadêmico
