@@ -10,5 +10,5 @@ public interface UsuarioDAO {
 	public void alterarUsuario(Usuario usuario);
 	public List<Usuario> listarTodosUsuarios();
 	public Usuario buscarUsuarioPorId(int usuarioId);
-	public boolean autenticar (Usuario user);
+	public boolean autenticar (String login, String senha);
 }

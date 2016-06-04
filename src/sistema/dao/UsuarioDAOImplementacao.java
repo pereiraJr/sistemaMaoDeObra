@@ -114,17 +114,10 @@ public class UsuarioDAOImplementacao implements UsuarioDAO{
 	}
 
 	@Override
-	public boolean autenticar(Usuario user) {
-		try{
-			String query= "select * from usuario where login=?, senha=?";
-			PreparedStatement preparedStatement = conn.prepareStatement( query );
-			preparedStatement.setString( 1, user.getLogin());
-			preparedStatement.setString( 1, user.getSenha());
-			preparedStatement.close();
-		} catch(SQLException e){
-			e.printStackTrace();
-		}
-		
-		return user != null;
+	public boolean autenticar(String login, String senha) {
+		// TODO Auto-generated method stub
+		return false;
 	}
+
+	
 }
