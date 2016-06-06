@@ -16,6 +16,7 @@
                 <th>Telefone</th>
                 <th>Endereco</th>
                 <th>Email</th>
+                <th>Login</th>
                 <th colspan="2">Action</th>
             </tr>
         </thead>
@@ -27,6 +28,7 @@
                     <td><c:out value="${usuario.telefone}" /></td>
                     <td><c:out value="${usuario.endereco}" /></td>
                     <td><c:out value="${usuario.email}" /></td>
+                    <td><c:out value="${usuario.login}" /></td>
                     <td><a
                         href="UsuarioController.do?action=editar&usuarioId=<c:out value="${usuario.usuarioId }"/>">Alterar</a></td>
                     <td><a

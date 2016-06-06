@@ -4,12 +4,12 @@ package sistema.model;
 public class Usuario {	
 	
 	private int usuarioId;
-	private String login;
-	private String senha;
 	private String nome;
 	private String email;
 	private String telefone;
 	private String endereco;
+	private String login;
+	private String senha;
 	
 	public String getEmail() {
 		return email;
@@ -71,7 +71,7 @@ public class Usuario {
     public String toString() {
         return "Usuario [usuarioId=" + usuarioId + ", nome=" + nome
                 + ", email=" + email + ", telefone=" + telefone + ", endereco="
-                + endereco + "]";
+                + endereco + ", login=" + login + ", senha=" +senha+"]";
     }    
 
 }

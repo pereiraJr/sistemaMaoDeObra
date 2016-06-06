@@ -22,12 +22,14 @@ public class UsuarioDAOImplementacao implements UsuarioDAO{
 	@Override
 	public void adicionarUsuario(Usuario usuario) {
 		try {
-			String query = "insert into usuario (nome, email, telefone, endereco) values (?,?,?,?)";
+			String query = "insert into usuario (nome, email, telefone, endereco, login, senha) values (?,?,?,?,?,?)";
 			PreparedStatement preparedStatement = conn.prepareStatement( query );
 			preparedStatement.setString( 1, usuario.getNome() );
 			preparedStatement.setString( 2, usuario.getEmail() );
 			preparedStatement.setString( 3, usuario.getTelefone() );
 			preparedStatement.setString( 4, usuario.getEndereco());
+			preparedStatement.setString( 5, usuario.getLogin());
+			preparedStatement.setString( 6, usuario.getSenha());
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 		} catch (SQLException e) {
@@ -49,6 +51,8 @@ public class UsuarioDAOImplementacao implements UsuarioDAO{
 				usuario.setEmail( resultSet.getString( "email" ) );
 				usuario.setTelefone( resultSet.getString( "telefone" ) );
 				usuario.setEndereco( resultSet.getString( "endereco" ) );
+				usuario.setLogin( resultSet.getString( "login" ) );
+				usuario.setSenha( resultSet.getString( "senha" ) );
 				usuarios.add(usuario);
 			}
 			resultSet.close();
@@ -62,13 +66,15 @@ public class UsuarioDAOImplementacao implements UsuarioDAO{
 	@Override
 	public void alterarUsuario(Usuario usuario) {
 		try {
-			String query = "update usuario set nome=?, email=?, telefone=?, endereco=? where usuarioId=?";
+			String query = "update usuario set nome=?, email=?, telefone=?, endereco=?, login=?, senha=? where usuarioId=?";
 			PreparedStatement preparedStatement = conn.prepareStatement( query );
 			preparedStatement.setString( 1, usuario.getNome());
 			preparedStatement.setString( 2, usuario.getEmail());
 			preparedStatement.setString( 3, usuario.getTelefone() );
 			preparedStatement.setString( 4, usuario.getEndereco() );
-			preparedStatement.setInt(5, usuario.getUsuarioId());
+			preparedStatement.setString(5, usuario.getLogin());
+			preparedStatement.setString(6, usuario.getSenha());
+			preparedStatement.setInt(7, usuario.getUsuarioId());
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 		} catch (SQLException e) {
@@ -90,6 +96,8 @@ public class UsuarioDAOImplementacao implements UsuarioDAO{
 				usuario.setEmail( resultSet.getString( "email" ) );
 				usuario.setTelefone( resultSet.getString( "telefone" ) );
 				usuario.setEndereco( resultSet.getString( "endereco" ) );
+				usuario.setLogin( resultSet.getString( "login" ) );
+				usuario.setSenha( resultSet.getString( "senha" ) );
 			}
 			resultSet.close();
 			preparedStatement.close();

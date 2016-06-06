@@ -34,6 +34,15 @@
                 <label for="email">Email</label> <input type="text" name="email"
                     value="<c:out value="${usuario.email}" />" placeholder="email" />
             </div>
+            
+            <div>
+                <label for="login">Login</label> <input type="text" name="login"
+                    value="<c:out value="${usuario.login}" />" placeholder="login" />
+            </div>
+            <div>
+                <label for="senha">Senha</label> <input type="password" name="senha"
+                    value="<c:out value="${usuario.senha}" />" placeholder="senha" />
+            </div>
             <div>
                 <input type="submit" value="Enviar" />
             </div>

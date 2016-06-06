@@ -60,6 +60,8 @@ public class UsuarioController extends HttpServlet{
         usuario.setEmail( request.getParameter( "email" ) );
         usuario.setTelefone( request.getParameter( "telefone" ) );
         usuario.setEndereco( request.getParameter( "endereco" ) );
+        usuario.setLogin( request.getParameter( "login" ) );
+        usuario.setSenha( request.getParameter( "senha" ) );
         String usuarioId = request.getParameter("usuarioId");
  
         if( usuarioId == null || usuarioId.isEmpty() )
