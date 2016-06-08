@@ -122,9 +122,28 @@ public class UsuarioDAOImplementacao implements UsuarioDAO{
 	}
 
 	@Override
-	public boolean autenticar(String login, String senha) {
-		// TODO Auto-generated method stub
-		return false;
+	public Usuario buscarUsuarioPorLogin(String login) {
+		Usuario usuario = new Usuario();
+		try {
+			String query = "select * from usuario where login=?";
+			PreparedStatement preparedStatement = conn.prepareStatement( query );
+			preparedStatement.setString(1, login);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while( resultSet.next() ) {
+				usuario.setUsuarioId( resultSet.getInt( "usuarioId" ) );
+				usuario.setNome( resultSet.getString( "nome" ) );
+				usuario.setEmail( resultSet.getString( "email" ) );
+				usuario.setTelefone( resultSet.getString( "telefone" ) );
+				usuario.setEndereco( resultSet.getString( "endereco" ) );
+				usuario.setLogin( resultSet.getString( "login" ) );
+				usuario.setSenha( resultSet.getString( "senha" ) );
+			}
+			resultSet.close();
+			preparedStatement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return usuario;
 	}
 
 	

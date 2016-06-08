@@ -12,15 +12,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import sistema.dao.LoginDao;
+import sistema.dao.UsuarioDAO;
+import sistema.model.Anuncio;
 import sistema.model.Usuario;
 import sistema.util.DBUtil;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
-	
+	private UsuarioDAO dao;
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -30,12 +33,19 @@ public class LoginServlet extends HttpServlet {
         
         String login = request.getParameter("userName");
         String pass = request.getParameter("password");
+        Usuario usuario = new Usuario();
+        
+        
+        usuario.setLogin(login);
         
         if(LoginDao.checkUser(login, pass))
         {
         	response.sendRedirect("index.jsp");
+        	HttpSession sessao = request.getSession();
+            sessao.setAttribute("sessaoUsuario",usuario);
+           // sessao.setAttribute("idusuario", usuario.getUsuarioId(usuario));
            //RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
-           //rs.include(request, response);
+           //rs.include(request, r	esponse);
         }
         else
         {

@@ -8,6 +8,11 @@
     <servlet-name>UsuarioController</servlet-name>
     <servlet-class>sistema.controller.UsuarioController</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>AnuncioController</servlet-name>
+    <servlet-class>sistema.controller.AnuncioController</servlet-class>
+  </servlet>
 
   <servlet>
     <servlet-name>LoginServlet</servlet-name>
@@ -17,6 +22,11 @@
   <servlet-mapping>
     <servlet-name>UsuarioController</servlet-name>
     <url-pattern>/UsuarioController.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>AnuncioController</servlet-name>
+    <url-pattern>/AnuncioController.do</url-pattern>
   </servlet-mapping>
   
    <servlet-mapping>

@@ -1,6 +1,5 @@
 package sistema.model;
 
-
 public class Usuario {	
 	
 	private int usuarioId;

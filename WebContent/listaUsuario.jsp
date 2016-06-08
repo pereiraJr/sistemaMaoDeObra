@@ -8,6 +8,7 @@
 <title>Todos os Registros</title>
 </head>
 <body>
+
     <table border="1">
         <thead>
             <tr>
@@ -17,7 +18,7 @@
                 <th>Endereco</th>
                 <th>Email</th>
                 <th>Login</th>
-                <th colspan="2">Action</th>
+                <th colspan="2">Ação</th>
             </tr>
         </thead>
         <tbody>
@@ -35,9 +36,11 @@
                         href="UsuarioController.do?action=deletar&usuarioId=<c:out value="${usuario.usuarioId }"/>">Deletar</a></td>
                 </tr>
             </c:forEach>
+            <c:out value='${sessionScope.sessaoUsuario}'/>
         </tbody>
     </table>
     <p>
+    
         <a href="UsuarioController.do?action=inserir">Adicionar Usuario</a>
     </p>
 </body>
