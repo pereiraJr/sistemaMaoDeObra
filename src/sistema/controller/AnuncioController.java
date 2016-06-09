@@ -61,7 +61,10 @@ public class AnuncioController extends HttpServlet{
     	anuncio.setTitulo( request.getParameter( "titulo" ) );
         anuncio.setDescricao( request.getParameter( "descricao" ) );
         String anuncioId = request.getParameter("anuncioId");
-        Usuario usuario = (Usuario)request.getSession().getAttribute("sessaoUsuario");
+        //anuncio.getUsuario().getUsuarioId();
+        //Usuario usuario = (Usuario)request.getSession().getAttribute("sessaoUsuario");
+        anuncio.setUsuario((Usuario) request.getSession().getAttribute("sessaoUsuario") );
+        
 
         if( anuncioId == null || anuncioId.isEmpty() )
             dao.adicionarAnuncio(anuncio);

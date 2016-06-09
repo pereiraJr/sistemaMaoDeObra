@@ -41,6 +41,8 @@ public class LoginServlet extends HttpServlet {
         	response.sendRedirect("index.jsp");
         	HttpSession sessao = request.getSession();
             sessao.setAttribute("sessaoUsuario",usuario);
+            
+            
            // sessao.setAttribute("idusuario", usuario.getUsuarioId(usuario));
            //RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
            //rs.include(request, r	esponse);

@@ -37,7 +37,7 @@
                 </tr>
             </c:forEach>
             <c:out value='${sessionScope.sessaoUsuario.usuarioId}'/>
-            <c:out value='${sessionScope.sessaoUsuario.nome}'/>
+            Bem Vindo: <c:out value='${sessionScope.sessaoUsuario.nome}'/>
         </tbody>
     </table>
     <p>
