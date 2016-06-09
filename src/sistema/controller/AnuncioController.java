@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import sistema.dao.AnuncioDAO;
 import sistema.dao.AnuncioDAOImplementacao;
 import sistema.model.Anuncio;
+import sistema.model.Usuario;
 
 @WebServlet("/AnuncioController")
 public class AnuncioController extends HttpServlet{
@@ -44,6 +45,7 @@ public class AnuncioController extends HttpServlet{
         }
         else if( action.equalsIgnoreCase( "inserir" ) ) {
             forward = INSERIR_OU_EDITAR;
+            
         }
         else {
             forward = LISTAR_ANUNCIO;
@@ -55,10 +57,12 @@ public class AnuncioController extends HttpServlet{
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	Anuncio anuncio = new Anuncio();
+    	
     	anuncio.setTitulo( request.getParameter( "titulo" ) );
         anuncio.setDescricao( request.getParameter( "descricao" ) );
         String anuncioId = request.getParameter("anuncioId");
- 
+        Usuario usuario = (Usuario)request.getSession().getAttribute("sessaoUsuario");
+
         if( anuncioId == null || anuncioId.isEmpty() )
             dao.adicionarAnuncio(anuncio);
         else {

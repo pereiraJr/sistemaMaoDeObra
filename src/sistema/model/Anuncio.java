@@ -5,7 +5,14 @@ public class Anuncio {
 	private int anuncioId;
 	private String titulo;
 	private String descricao;
+	private Usuario usuario;
 	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	public int getAnuncioId() {
 		return anuncioId;
 	}

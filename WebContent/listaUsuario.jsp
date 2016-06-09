@@ -36,12 +36,14 @@
                         href="UsuarioController.do?action=deletar&usuarioId=<c:out value="${usuario.usuarioId }"/>">Deletar</a></td>
                 </tr>
             </c:forEach>
-            <c:out value='${sessionScope.sessaoUsuario}'/>
+            <c:out value='${sessionScope.sessaoUsuario.usuarioId}'/>
+            <c:out value='${sessionScope.sessaoUsuario.nome}'/>
         </tbody>
     </table>
     <p>
     
-        <a href="UsuarioController.do?action=inserir">Adicionar Usuario</a>
+        <a href="UsuarioController.do?action=inserir">Adicionar Usuario</a><br>
+         <a href="AnuncioController.do?action=inserir">Adicionar Anuncio</a>
     </p>
 </body>
 </html>

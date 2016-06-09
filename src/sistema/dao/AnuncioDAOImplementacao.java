@@ -22,10 +22,11 @@ public class AnuncioDAOImplementacao implements AnuncioDAO{
 	@Override
 	public void adicionarAnuncio(Anuncio anuncio) {
 		try {
-			String query = "insert into anuncio (titulo, descricao) values (?,?)";
+			String query = "insert into anuncio (titulo, descricao, id_usuario) values (?,?,?)";
 			PreparedStatement preparedStatement = conn.prepareStatement( query );
 			preparedStatement.setString( 1, anuncio.getTitulo() );
 			preparedStatement.setString( 2, anuncio.getDescricao() );
+			preparedStatement.setInt( 3, anuncio.getUsuario().getUsuarioId() );
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 		} catch (SQLException e) {
@@ -103,5 +104,7 @@ public class AnuncioDAOImplementacao implements AnuncioDAO{
 		}
 
 	}
+	
+	
 	
 }

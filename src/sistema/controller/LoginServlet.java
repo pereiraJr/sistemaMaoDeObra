@@ -33,12 +33,10 @@ public class LoginServlet extends HttpServlet {
         
         String login = request.getParameter("userName");
         String pass = request.getParameter("password");
-        Usuario usuario = new Usuario();
+        Usuario usuario = LoginDao.checkUser(login, pass);
         
         
-        usuario.setLogin(login);
-        
-        if(LoginDao.checkUser(login, pass))
+        if(usuario != null)
         {
         	response.sendRedirect("index.jsp");
         	HttpSession sessao = request.getSession();
