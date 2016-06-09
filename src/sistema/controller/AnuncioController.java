@@ -21,6 +21,7 @@ public class AnuncioController extends HttpServlet{
     private static final long serialVersionUID = 1L;
     public static final String LISTAR_ANUNCIO = "/listaAnuncio.jsp";
     public static final String INSERIR_OU_EDITAR = "/anuncio.jsp";
+    public static final String LISTAR_ANUNCIO_USUARIO = "/listaAnuncioUsuario.jsp";
     
     public AnuncioController() {
         dao = new AnuncioDAOImplementacao();
@@ -45,6 +46,15 @@ public class AnuncioController extends HttpServlet{
         }
         else if( action.equalsIgnoreCase( "inserir" ) ) {
             forward = INSERIR_OU_EDITAR;
+        }
+         
+        else if ( action.equalsIgnoreCase( "listarPorUsuario")) {
+        	forward = LISTAR_ANUNCIO_USUARIO;
+        	Usuario usuario = (Usuario) request.getSession().getAttribute("sessaoUsuario") ;
+        	int usuarioId = usuario.getUsuarioId();
+        	//int usuarioId = Integer.parseInt(request.getParameter("usuarioId"));
+        	Anuncio anuncio = (Anuncio) dao.listarAnuncioPorUsuario(usuarioId);
+        	request.setAttribute("anuncios", anuncio);
             
         }
         else {
@@ -61,8 +71,6 @@ public class AnuncioController extends HttpServlet{
     	anuncio.setTitulo( request.getParameter( "titulo" ) );
         anuncio.setDescricao( request.getParameter( "descricao" ) );
         String anuncioId = request.getParameter("anuncioId");
-        //anuncio.getUsuario().getUsuarioId();
-        //Usuario usuario = (Usuario)request.getSession().getAttribute("sessaoUsuario");
         anuncio.setUsuario((Usuario) request.getSession().getAttribute("sessaoUsuario") );
         
 

@@ -34,7 +34,7 @@ public class Anuncio {
 	
 	@Override
     public String toString() {
-        return "Anuncio [anuncioId=" + anuncioId + ", titulo=" + titulo + ", descricao=" + descricao + "]";
+        return "Anuncio [anuncioId=" + anuncioId + ", titulo=" + titulo + ", descricao=" + descricao + ", usuario=" + usuario + "]";
     } 
 
 }

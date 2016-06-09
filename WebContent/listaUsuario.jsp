@@ -43,7 +43,8 @@
     <p>
     
         <a href="UsuarioController.do?action=inserir">Adicionar Usuario</a><br>
-         <a href="AnuncioController.do?action=inserir">Adicionar Anuncio</a>
+         <a href="AnuncioController.do?action=inserir">Adicionar Anuncio</a><br>
+         <a href="AnuncioController.do?action=listarPorUsuario">Listar Meus Pedidos</a>
     </p>
 </body>
 </html>

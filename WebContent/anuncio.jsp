@@ -23,7 +23,8 @@
             </div>
             <div>
                 <label for="descricao">Descricao</label> 
-                                    <textarea  id='descricao' name='descricao' id='descricao'><c:out value="${anuncio.descricao}" /> </textarea> 
+                <textarea  id='descricao' name='descricao' 
+                id='descricao'><c:out value="${anuncio.descricao}" /> </textarea> 
             </div>
             <div>
                 <input type="submit" value="Enviar" />
