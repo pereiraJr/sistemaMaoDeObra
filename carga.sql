@@ -47,6 +47,7 @@ CREATE TABLE `anuncio` (
 `anuncioId` int(5) NOT NULL AUTO_INCREMENT,
 `titulo` varchar(25) DEFAULT NULL,
 `descricao` varchar(50) DEFAULT NULL,
+`id_usuario` int(5),
 PRIMARY KEY (`anuncioId`));
 
 ALTER TABLE anuncio ADD id_usuario int(5);

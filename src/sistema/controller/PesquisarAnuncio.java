@@ -36,7 +36,6 @@ public class PesquisarAnuncio extends HttpServlet {
         String titulo = request.getParameter("titulo");
         anuncio = PesquisarAnuncioPorTituloDAO.anuncioPorTitulo(titulo);
         
-        
         if(anuncio != null)
         {
         	response.sendRedirect("anuncioPorTitulo.jsp");
@@ -45,8 +44,7 @@ public class PesquisarAnuncio extends HttpServlet {
         }
         else
         {
-           RequestDispatcher rs = request.getRequestDispatcher("login.jsp");
-           rs.include(request, response);
+        	response.sendRedirect("404.jsp");
         }
     }  
 }

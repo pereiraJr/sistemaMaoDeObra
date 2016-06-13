@@ -260,80 +260,6 @@ $(document).pngFix( );
 		<div class="nav">
 		<div class="table">
 		
-		<ul class="select"><li><a href="#nogo"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Dashboard Details 1</a></li>
-				<li><a href="#nogo">Dashboard Details 2</a></li>
-				<li><a href="#nogo">Dashboard Details 3</a></li>
-			</ul>
-		</div>
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-		</li>
-		</ul>
-		
-		<div class="nav-divider">&nbsp;</div>
-		                    
-		<ul class="current"><li><a href="#nogo"><b>Products</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub show">
-			<ul class="sub">
-				<li><a href="AnuncioController.do?action=inserir">Inserir Anuncio</a></li>
-				<li class="sub_show"><a href="UsuarioController?action=listarUsuario">Ver todos os produtos</a></li>
-				<li><a href="AnuncioController.do?action=listarPorUsuario">Mostrar Meus anuncios</a></li>
-			</ul>
-		</div>
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-		</li>
-		</ul>
-		
-		<div class="nav-divider">&nbsp;</div>
-		
-		<ul class="select"><li><a href="#nogo"><b>Categories</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Categories Details 1</a></li>
-				<li><a href="#nogo">Categories Details 2</a></li>
-				<li><a href="#nogo">Categories Details 3</a></li>
-			</ul>
-		</div>
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-		</li>
-		</ul>
-		
-		<div class="nav-divider">&nbsp;</div>
-		
-		<ul class="select"><li><a href="#nogo"><b>Clients</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Clients Details 1</a></li>
-				<li><a href="#nogo">Clients Details 2</a></li>
-				<li><a href="#nogo">Clients Details 3</a></li>
-			 
-			</ul>
-		</div>
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-		</li>
-		</ul>
-		
-		<div class="nav-divider">&nbsp;</div>
-		
-		<ul class="select"><li><a href="#nogo"><b>News</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">News details 1</a></li>
-				<li><a href="#nogo">News details 2</a></li>
-				<li><a href="#nogo">News details 3</a></li>
-			</ul>
-		</div>
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-		</li>
-		</ul>
-		
 		<div class="clear"></div>
 		</div>
 		<div class="clear"></div>
@@ -355,7 +281,7 @@ $(document).pngFix( );
 
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>Add product</h1>
+		<h1>Anuncios com Titulo selecionado</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -376,51 +302,6 @@ $(document).pngFix( );
 			<!--  start table-content  -->
 			<div id="table-content">
 			
-				<!--  start message-yellow -->
-				<div id="message-yellow">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="yellow-left">You have a new message. <a href="">Go to Inbox.</a></td>
-					<td class="yellow-right"><a class="close-yellow"><img src="images/table/icon_close_yellow.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-yellow -->
-				
-				<!--  start message-red -->
-				<div id="message-red">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="red-left">Error. <a href="">Please try again.</a></td>
-					<td class="red-right"><a class="close-red"><img src="images/table/icon_close_red.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-red -->
-				
-				<!--  start message-blue -->
-				<div id="message-blue">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="blue-left">Welcome back. <a href="">View my account.</a> </td>
-					<td class="blue-right"><a class="close-blue"><img src="images/table/icon_close_blue.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-blue -->
-			
-				<!--  start message-green -->
-				<div id="message-green">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="green-left">Product added sucessfully. <a href="">Add new one.</a></td>
-					<td class="green-right"><a class="close-green"><img src="images/table/icon_close_green.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-green -->
-		
-		 
 				<!--  start product-table ..................................................................................... -->
 				<form id="mainform" action="">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
@@ -429,18 +310,12 @@ $(document).pngFix( );
 					<th class="table-header-check"><a id="toggle-all" ></a> </th>
 					<th class="table-header-repeat line-left minwidth-1"><a href="">Titulo</a></th>
 					<th class="table-header-repeat line-left"><a href="">Descricao</a></th>
-					<th class="table-header-options line-left"><a href="">Options</a></th>
 				</tr>
 				<c:forEach items="${sessaoAnuncio}" var="anuncio">
 				<tr>
 					<td><input  type="checkbox"/></td>
                     <td><c:out value="${anuncio.titulo}" /></td>
                     <td><c:out value="${anuncio.descricao}" /></td>
-					<td class="options-width">
-					<a
-                        href="AnuncioController.do?action=editar&anuncioId=<c:out value="${anuncio.anuncioId  }"/>"title="Editar" class="icon-1 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-4 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-5 info-tooltip"></a>
 					</td>
 				</tr>
 				</c:forEach>
@@ -452,10 +327,10 @@ $(document).pngFix( );
 		
 			<!--  start actions-box ............................................... -->
 			<div id="actions-box">
-				<a href="" class="action-slider"></a>
+				<a class="action-slider"></a>
 				<div id="actions-box-slider">
-					<a href="" class="action-edit">Edit</a>
-					<a href="" class="action-delete">Delete</a>
+					<a class="action-edit">Edit</a>
+					<a class="action-delete">Delete</a>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -465,11 +340,11 @@ $(document).pngFix( );
 			<table border="0" cellpadding="0" cellspacing="0" id="paging-table">
 			<tr>
 			<td>
-				<a href="" class="page-far-left"></a>
-				<a href="" class="page-left"></a>
+				<a class="page-far-left"></a>
+				<a class="page-left"></a>
 				<div id="page-info">Page <strong>1</strong> / 15</div>
-				<a href="" class="page-right"></a>
-				<a href="" class="page-far-right"></a>
+				<a class="page-right"></a>
+				<a class="page-far-right"></a>
 			</td>
 			<td>
 			<select  class="styledselect_pages">
