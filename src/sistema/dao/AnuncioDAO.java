@@ -10,5 +10,6 @@ public interface AnuncioDAO {
 	public void alterarAnuncio(Anuncio anuncio);
 	public List<Anuncio> listarTodosAnuncios();
 	public Anuncio buscarAnuncioPorId(int anuncioId);
-	public List<Anuncio>listarAnuncioPorUsuario (int usuarioId);
+	public List<Anuncio> listarAnuncioPorUsuario (int usuarioId);
+	public List<Anuncio> listarAnuncioPorTitulo (String titulo);
 }

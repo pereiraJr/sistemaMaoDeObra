@@ -109,8 +109,9 @@ public class AnuncioDAOImplementacao implements AnuncioDAO{
 	public List<Anuncio>listarAnuncioPorUsuario (int usuarioId){
 		List<Anuncio> anuncios = new ArrayList<Anuncio>();
 		try {
+			
 			Statement statement = conn.createStatement();
-			ResultSet resultSet = statement.executeQuery( "select * from anuncio where usuarioId=?" );
+			ResultSet resultSet = statement.executeQuery( "select * from anuncio where id_usuario ='" + usuarioId+ " '" );
 			while( resultSet.next() ) {
 				Anuncio anuncio = new Anuncio();
 				anuncio.setAnuncioId (resultSet.getInt( "anuncioId" ) );
@@ -125,5 +126,27 @@ public class AnuncioDAOImplementacao implements AnuncioDAO{
 		}
 		return anuncios;
 		
+	}
+
+	@Override
+	public List<Anuncio> listarAnuncioPorTitulo(String titulo) {
+		List<Anuncio> anuncios = new ArrayList<Anuncio>();
+		try {
+			
+			Statement statement = conn.createStatement();
+			ResultSet resultSet = statement.executeQuery( "select * from anuncio where titulo ='" + titulo + " '" );
+			while( resultSet.next() ) {
+				Anuncio anuncio = new Anuncio();
+				anuncio.setAnuncioId (resultSet.getInt( "anuncioId" ) );
+				anuncio.setTitulo( resultSet.getString( "titulo") );
+				anuncio.setDescricao( resultSet.getString( "descricao") );
+				anuncios.add(anuncio);
+			}
+			resultSet.close();
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return anuncios;
 	}
 }

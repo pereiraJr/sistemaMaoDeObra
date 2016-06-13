@@ -41,24 +41,12 @@ public class LoginDao {
 					.prepareStatement("select * from usuario where login=? and senha=?");
 			ps.setString(1, login);
 			ps.setString(2, senha);
-			
-//			ps.setString( 1, usuario.getNome() );
-//			ps.setString( 2, usuario.getEmail() );
-//			ps.setString( 3, usuario.getTelefone() );
-//			ps.setString( 4, usuario.getEndereco());
-//			ps.gString( 5, usuario.getLogin());
-//			ps.getString(6, usuario.getSenha());
 			rs = ps.executeQuery();
+			
 			if (rs.next()) {
 				usuario = new Usuario();
 				usuario.setUsuarioId(rs.getInt("usuarioId"));
 				usuario.setNome(rs.getString("nome"));
-//				rs.setString( 1, usuario.getNome() );
-//				rs.setString( 2, usuario.getEmail() );
-//				rs.setString( 3, usuario.getTelefone() );
-//				rs.setString( 4, usuario.getEndereco());
-//				rs.getString( 5, usuario.getLogin());
-//				st = true;
 			}
 
 		} catch (Exception e) {

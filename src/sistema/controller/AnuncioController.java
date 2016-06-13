@@ -1,6 +1,7 @@
 package sistema.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,8 +21,9 @@ public class AnuncioController extends HttpServlet{
 	private AnuncioDAO dao;
     private static final long serialVersionUID = 1L;
     public static final String LISTAR_ANUNCIO = "/listaAnuncio.jsp";
-    public static final String INSERIR_OU_EDITAR = "/anuncio.jsp";
-    public static final String LISTAR_ANUNCIO_USUARIO = "/listaAnuncioUsuario.jsp";
+    public static final String INSERIR_OU_EDITAR = "/form.jsp";
+    public static final String LISTAR_ANUNCIO_USUARIO = "/anuncioPorUsuario.jsp";
+    public static final String LISTAR_ANUNCIO_POR_TITULO = "/anuncioPorTitulo.jsp";
     
     public AnuncioController() {
         dao = new AnuncioDAOImplementacao();
@@ -52,8 +54,7 @@ public class AnuncioController extends HttpServlet{
         	forward = LISTAR_ANUNCIO_USUARIO;
         	Usuario usuario = (Usuario) request.getSession().getAttribute("sessaoUsuario") ;
         	int usuarioId = usuario.getUsuarioId();
-        	//int usuarioId = Integer.parseInt(request.getParameter("usuarioId"));
-        	Anuncio anuncio = (Anuncio) dao.listarAnuncioPorUsuario(usuarioId);
+        	List<Anuncio> anuncio = dao.listarAnuncioPorUsuario(usuarioId);
         	request.setAttribute("anuncios", anuncio);
             
         }
