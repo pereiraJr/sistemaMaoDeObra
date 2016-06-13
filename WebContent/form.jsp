@@ -456,20 +456,6 @@ $(document).pngFix( );
 </tr>
 </table>
 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
 <div class="clear">&nbsp;</div>
 
 </div>

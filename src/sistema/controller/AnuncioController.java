@@ -59,7 +59,7 @@ public class AnuncioController extends HttpServlet{
             
         }
         else {
-            forward = LISTAR_ANUNCIO;
+            forward = LISTAR_ANUNCIO_USUARIO;
             request.setAttribute("anuncios", dao.listarTodosAnuncios() );
         }
         RequestDispatcher view = request.getRequestDispatcher( forward );
@@ -81,7 +81,7 @@ public class AnuncioController extends HttpServlet{
         	anuncio.setAnuncioId( Integer.parseInt(anuncioId) );
             dao.alterarAnuncio(anuncio);
         }
-        RequestDispatcher view = request.getRequestDispatcher( LISTAR_ANUNCIO );
+        RequestDispatcher view = request.getRequestDispatcher( LISTAR_ANUNCIO_USUARIO );
         request.setAttribute("anuncios", dao.listarTodosAnuncios());
         view.forward(request, response);
     }
