@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import sistema.dao.AnuncioDAO;
 import sistema.dao.UsuarioDAO;
 import sistema.dao.UsuarioDAOImplementacao;
 import sistema.model.Usuario;
@@ -17,11 +18,13 @@ import sistema.model.Usuario;
 public class UsuarioController extends HttpServlet{
 
 	
+	private AnuncioDAO dao2;
 	private UsuarioDAO dao;
     private static final long serialVersionUID = 1L;
-    //public static final String LISTAR_USUARIO = "/listaUsuario.jsp";
-    public static final String LISTAR_USUARIO = "/table.jsp";
-    public static final String INSERIR_OU_EDITAR = "/table.jsp";
+    public static final String LISTAR_USUARIO = "/todosUsuarios.jsp";
+    public static final String LISTAR_TODOS_ANUNCIOS = "/todosAnuncios.jsp";
+    public static final String INSERIR = "/todosAnuncios.jsp";
+    public static final String EDITAR = "/editarUsuario.jsp";
     
     public UsuarioController() {
         dao = new UsuarioDAOImplementacao();
@@ -39,13 +42,13 @@ public class UsuarioController extends HttpServlet{
             request.setAttribute("usuarios", dao.listarTodosUsuarios() );
         }
         else if( action.equalsIgnoreCase( "editar" ) ) {
-            forward = INSERIR_OU_EDITAR;
+            forward = EDITAR;
             int usuarioId = Integer.parseInt( request.getParameter("usuarioId") );
             Usuario usuario = dao.buscarUsuarioPorId(usuarioId);
             request.setAttribute("usuario", usuario);
         }
         else if( action.equalsIgnoreCase( "inserir" ) ) {
-            forward = INSERIR_OU_EDITAR;
+            forward = INSERIR;
         }
         else {
             forward = LISTAR_USUARIO;
@@ -71,9 +74,10 @@ public class UsuarioController extends HttpServlet{
             usuario.setUsuarioId( Integer.parseInt(usuarioId) );
             dao.alterarUsuario(usuario);
         }
-        RequestDispatcher view = request.getRequestDispatcher( LISTAR_USUARIO );
-        request.setAttribute("usuarios", dao.listarTodosUsuarios());
-        view.forward(request, response);
+        response.sendRedirect("login.jsp");
+        //RequestDispatcher view = request.getRequestDispatcher( LISTAR_USUARIO );
+        //request.setAttribute("usuarios", dao.listarTodosUsuarios());
+        //view.forward(request, response);
     }
  
 }

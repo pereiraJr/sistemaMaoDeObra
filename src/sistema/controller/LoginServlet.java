@@ -36,11 +36,10 @@ public class LoginServlet extends HttpServlet {
 		Usuario usuario = LoginDao.checkUser(login, pass);
 
 		if(usuario != null){
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("indexAnuncio.jsp");
 			HttpSession sessao = request.getSession();
 			sessao.setAttribute("sessaoUsuario",usuario);
 		}else{
-			out.println("Login ou Senha incorretos");
 			RequestDispatcher rs = request.getRequestDispatcher("login.jsp");
 			rs.include(request, response);
 		}

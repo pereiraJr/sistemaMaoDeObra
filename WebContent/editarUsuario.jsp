@@ -1,7 +1,6 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-   
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,7 +13,7 @@
 
 <!--  jquery core -->
 <script src="js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
-
+ 
 <!--  checkbox styling script -->
 <script src="js/jquery/ui.core.js" type="text/javascript"></script>
 <script src="js/jquery/ui.checkbox.js" type="text/javascript"></script>
@@ -30,6 +29,7 @@ $(function(){
 });
 </script>  
 
+
 <![if !IE 7]>
 
 <!--  styled select box script version 1 -->
@@ -42,6 +42,7 @@ $(document).ready(function() {
  
 
 <![endif]>
+
 
 <!--  styled select box script version 2 --> 
 <script src="js/jquery/jquery.selectbox-0.5_style_2.js" type="text/javascript"></script>
@@ -63,14 +64,14 @@ $(document).ready(function() {
 <!--  styled file upload script --> 
 <script src="js/jquery/jquery.filestyle.js" type="text/javascript"></script>
 <script type="text/javascript" charset="utf-8">
-  $(function() {
-      $("input.file_1").filestyle({ 
-          image: "images/forms/choose-file.gif",
-          imageheight : 21,
-          imagewidth : 78,
-          width : 310
-      });
-  });
+$(function() {
+	$("input.file_1").filestyle({ 
+	image: "images/forms/upload_file.gif",
+	imageheight : 29,
+	imagewidth : 78,
+	width : 300
+	});
+});
 </script>
 
 <!-- Custom jquery scripts -->
@@ -92,7 +93,6 @@ $(function() {
 	});
 });
 </script> 
-
 
 <!--  date picker script -->
 <link rel="stylesheet" href="css/datePicker.css" type="text/css" />
@@ -193,13 +193,15 @@ $(document).pngFix( );
 		<tr>
 		<td><input type="text" value="Search" onblur="if (this.value=='') { this.value='Search'; }" onfocus="if (this.value=='Search') { this.value=''; }" class="top-search-inp" /></td>
 		<td>
+		 
 		<select  class="styledselect">
-			<option value=""> All</option>
-			<option value=""> Products</option>
-			<option value=""> Categories</option>
+			<option value="">All</option>
+			<option value="">Products</option>
+			<option value="">Categories</option>
 			<option value="">Clients</option>
 			<option value="">News</option>
 		</select> 
+		 
 		</td>
 		<td>
 		<input type="image" src="images/shared/top_search_btn.gif"  />
@@ -260,10 +262,44 @@ $(document).pngFix( );
 		<div class="nav">
 		<div class="table">
 		
-		<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+	           
+		<ul class="current"><li><a href="#nogo"><b>Products</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<div class="select_sub show">
+			<ul class="sub">
+				<li><a href="AnuncioController.do?action=inserir">Inserir Anuncio</a></li>
+				<li class="sub_show"><a href="AnuncioController?action=listarAnuncio">Ver todos os anuncios</a></li>
+				<li><a href="AnuncioController.do?action=listarPorUsuario">Mostrar Meus anuncios</a></li>
+				<li><a href="UsuarioController?action=listarUsuario" >Painel Administrador</a></li>
+			</ul>
 		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+		
+		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
+		
+		</div>
+	</div>
 		<!--  start nav -->
 
 </div>
@@ -271,116 +307,132 @@ $(document).pngFix( );
 <!--  start nav-outer -->
 </div>
 <!--  start nav-outer-repeat................................................... END -->
-
+ 
  <div class="clear"></div>
  
-<!-- start content-outer ........................................................................................................................START -->
+<!-- start content-outer -->
 <div id="content-outer">
 <!-- start content -->
 <div id="content">
 
-	<!--  start page-heading -->
-	<div id="page-heading">
-		<h1>Anuncios com Titulo selecionado</h1>
-	</div>
-	<!-- end page-heading -->
 
-	<table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
-	<tr>
-		<th rowspan="3" class="sized"><img src="images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
-		<th class="topleft"></th>
-		<td id="tbl-border-top">&nbsp;</td>
-		<th class="topright"></th>
-		<th rowspan="3" class="sized"><img src="images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
-	</tr>
-	<tr>
-		<td id="tbl-border-left"></td>
-		<td>
-		<!--  start content-table-inner ...................................................................... START -->
-		<div id="content-table-inner">
-		
-			<!--  start table-content  -->
-			<div id="table-content">
-			
-				<!--  start product-table ..................................................................................... -->
-				<form id="mainform" action="">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
-				
-				<tr>
-					<th class="table-header-check"><a id="toggle-all" ></a> </th>
-					<th class="table-header-repeat line-left minwidth-1"><a href="">Titulo</a></th>
-					<th class="table-header-repeat line-left"><a href="">Descricao</a></th>
-				</tr>
-				<c:forEach items="${sessaoAnuncio}" var="anuncio">
-				<tr>
-					<td><input  type="checkbox"/></td>
-                    <td><c:out value="${anuncio.titulo}" /></td>
-                    <td><c:out value="${anuncio.descricao}" /></td>
-					</td>
-				</tr>
-				</c:forEach>
-				</table>
-				<!--  end product-table................................... --> 
-				</form>
-			</div>
-			<!--  end content-table  -->
-			<h2>
-			Não Encontrou o que procura?
-			Deseja Ver Mais Anuncios?
-			<a href="/sistemaMaoDeObraWeb/login.jsp">Clique Aqui</a></h2>
-			<!--  start actions-box ............................................... -->
-			<div id="actions-box">
-				<a class="action-slider"></a>
-				<div id="actions-box-slider">
-					<a class="action-edit">Edit</a>
-					<a class="action-delete">Delete</a>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<!-- end actions-box........... -->
-			
-			<!--  start paging..................................................... -->
-			<table border="0" cellpadding="0" cellspacing="0" id="paging-table">
-			<tr>
-			<td>
-				<a class="page-far-left"></a>
-				<a class="page-left"></a>
-				<div id="page-info">Page <strong>1</strong> / 15</div>
-				<a class="page-right"></a>
-				<a class="page-far-right"></a>
-			</td>
-			<td>
-			<select  class="styledselect_pages">
-				<option value="">Number of rows</option>
-				<option value="">1</option>
-				<option value="">2</option>
-				<option value="">3</option>
-			</select>
-			</td>
-			</tr>
-			</table>
-			<!--  end paging................ -->
-			
+<div id="page-heading"><h1>Aditar Usuario</h1></div>
+
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+<tr>
+	<th rowspan="3" class="sized"><img src="images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+	<th class="topleft"></th>
+	<td id="tbl-border-top">&nbsp;</td>
+	<th class="topright"></th>
+	<th rowspan="3" class="sized"><img src="images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+</tr>
+<tr>
+	<td id="tbl-border-left"></td>
+	<td>
+	<!--  start content-table-inner -->
+	<div id="content-table-inner">
+	
+	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	<tr valign="top">
+	<td>
+	
+	
+		<!--  start step-holder -->
+		<div id="step-holder">
+			<div class="step-no">1</div>
+			<div class="step-dark-left"><a href="UsuarioController?action=listarUsuario">Todos Usuarios</a></div>
+			<div class="step-dark-right">&nbsp;</div>
 			<div class="clear"></div>
-		 
 		</div>
-		<!--  end content-table-inner ............................................END  -->
-		</td>
-		<td id="tbl-border-right"></td>
-	</tr>
-	<tr>
-		<th class="sized bottomleft"></th>
-		<td id="tbl-border-bottom">&nbsp;</td>
-		<th class="sized bottomright"></th>
-	</tr>
-	</table>
-	<div class="clear">&nbsp;</div>
+		<!--  end step-holder -->
+	
+		<!-- start id-form -->
+		<form action="UsuarioController.do" method="post">
+		<fieldset>
+			<div>
+                <label for="usuarioId">ID Usuario </label> <input class="inp-form" type="text"
+                    name="usuarioId" value="<c:out value="${usuario.usuarioId}" />"
+                    readonly="readonly" placeholder="Nao Preencha" />
+            </div>
+            <div>
+                <label for="nome">Nome </label> <input class="inp-form" type="text"
+                    name="nome" value="<c:out value="${usuario.nome}" />"
+                    placeholder="Primeiro Nome" />
+            </div>
+            <div>
+                <label for="telefone">Telefone</label> <input class="inp-form" type="text"
+                    name="telefone" value="<c:out value="${usuario.telefone}" />"
+                    placeholder="Telefone" />
+            </div>
+                        
+            <div>
+                <label for="endereco">Endereco</label> 
+                <textarea class="form-textarea" id='endereco' name='endereco' 
+                id='endereco'><c:out value="${usuario.endereco}" /> </textarea> 
+            </div>
+                
+            <div>
+                <label for="email">Email</label> <input class="inp-form" type="text" name="email"
+                    value="<c:out value="${usuario.email}" />" placeholder="email" />
+            </div>
+            
+            <div>
+                <label for="login">Login</label> <input class="inp-form" type="text" name="login"
+                    value="<c:out value="${usuario.login}" />" placeholder="login" />
+            </div>
+            <div>
+                <label for="senha">Senha</label> <input class="inp-form" type="password" name="senha"
+                    value="<c:out value="${usuario.senha}" />" placeholder="senha" /><br></br>
+            </div>
+            <div>
+                <input type="submit" value="" class="form-submit" />
+                <input type="reset" value="" class="form-reset"  />
+            </div>
+        </fieldset>
+	 </form>
+		
+		
+	<!-- end id-form  -->
+
+	</td>
+	<td>
+
+	<!--  start related-activities -->
+	
+	<!-- end related-activities -->
+
+</td>
+</tr>
+<tr>
+<td><img src="images/shared/blank.gif" width="695" height="1" alt="blank" /></td>
+<td></td>
+</tr>
+</table>
+ 
+<div class="clear"></div>
+ 
+
+</div>
+<!--  end content-table-inner  -->
+</td>
+<td id="tbl-border-right"></td>
+</tr>
+<tr>
+	<th class="sized bottomleft"></th>
+	<td id="tbl-border-bottom">&nbsp;</td>
+	<th class="sized bottomright"></th>
+</tr>
+</table>
+<div class="clear">&nbsp;</div>
 
 </div>
 <!--  end content -->
 <div class="clear">&nbsp;</div>
 </div>
-<!--  end content-outer........................................................END -->
+<!--  end content-outer -->
+
+ 
 
 <div class="clear">&nbsp;</div>
     
@@ -388,7 +440,7 @@ $(document).pngFix( );
 <div id="footer">
 	<!--  start footer-left -->
 	<div id="footer-left">
-	
+	Admin Skin &copy; Copyright Internet Dreams Ltd. <a href="">www.netdreams.co.uk</a>. All rights reserved.</div>
 	<!--  end footer-left -->
 	<div class="clear">&nbsp;</div>
 </div>

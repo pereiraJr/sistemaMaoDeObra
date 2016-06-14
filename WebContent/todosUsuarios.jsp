@@ -1,4 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+   
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -257,83 +260,44 @@ $(document).pngFix( );
 		<div class="nav">
 		<div class="table">
 		
-		<ul class="select"><li><a href="#nogo"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Dashboard Details 1</a></li>
-				<li><a href="#nogo">Dashboard Details 2</a></li>
-				<li><a href="#nogo">Dashboard Details 3</a></li>
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
 		                    
 		<ul class="current"><li><a href="#nogo"><b>Products</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub show">
 			<ul class="sub">
 				<li><a href="AnuncioController.do?action=inserir">Inserir Anuncio</a></li>
-				<li class="sub_show"><a href="">Ver todos os produtos</a></li>
-				<li><a href="AnuncioController.do?action=listarPorUsuario">Mostrar todos usuarios</a></li>
+				<li class="sub_show"><a href="AnuncioController?action=listarAnuncio">Ver todos os anuncios</a></li>
+				<li><a href="AnuncioController.do?action=listarPorUsuario">Mostrar Meus anuncios</a></li>
+				<li><a href="UsuarioController?action=listarUsuario" >Painel Administrador</a></li>
 			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
-		
-		<ul class="select"><li><a href="#nogo	"><b>Categories</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Categories Details 1</a></li>
-				<li><a href="#nogo">Categories Details 2</a></li>
-				<li><a href="#nogo">Categories Details 3</a></li>
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
 		
-		<ul class="select"><li><a href="#nogo"><b>Clients</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Clients Details 1</a></li>
-				<li><a href="#nogo">Clients Details 2</a></li>
-				<li><a href="#nogo">Clients Details 3</a></li>
-			 
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
 		
-		<ul class="select"><li><a href="#nogo"><b>News</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">News details 1</a></li>
-				<li><a href="#nogo">News details 2</a></li>
-				<li><a href="#nogo">News details 3</a></li>
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
 		</div>
 		<!--  start nav -->
 
@@ -352,7 +316,7 @@ $(document).pngFix( );
 
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>Add product</h1>
+		<h1>Todos Anuncios</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -373,153 +337,35 @@ $(document).pngFix( );
 			<!--  start table-content  -->
 			<div id="table-content">
 			
-				<!--  start message-yellow -->
-				<div id="message-yellow">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="yellow-left">You have a new message. <a href="">Go to Inbox.</a></td>
-					<td class="yellow-right"><a class="close-yellow"><img src="images/table/icon_close_yellow.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-yellow -->
-				
-				<!--  start message-red -->
-				<div id="message-red">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="red-left">Error. <a href="">Please try again.</a></td>
-					<td class="red-right"><a class="close-red"><img src="images/table/icon_close_red.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-red -->
-				
-				<!--  start message-blue -->
-				<div id="message-blue">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="blue-left">Welcome back. <a href="">View my account.</a> </td>
-					<td class="blue-right"><a class="close-blue"><img src="images/table/icon_close_blue.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-blue -->
-			
-				<!--  start message-green -->
-				<div id="message-green">
-				<table border="0" width="100%" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="green-left">Product added sucessfully. <a href="">Add new one.</a></td>
-					<td class="green-right"><a class="close-green"><img src="images/table/icon_close_green.gif"   alt="" /></a></td>
-				</tr>
-				</table>
-				</div>
-				<!--  end message-green -->
 		
 		 
 				<!--  start product-table ..................................................................................... -->
 				<form id="mainform" action="">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
+				
 				<tr>
 					<th class="table-header-check"><a id="toggle-all" ></a> </th>
-					<th class="table-header-repeat line-left minwidth-1"><a href="">Last Name</a>	</th>
-					<th class="table-header-repeat line-left minwidth-1"><a href="">First Name</a></th>
-					<th class="table-header-repeat line-left"><a href="">Email</a></th>
-					<th class="table-header-repeat line-left"><a href="">Due</a></th>
-					<th class="table-header-repeat line-left"><a href="">Website</a></th>
+					<th class="table-header-repeat line-left minwidth-1"><a href="">Nome</a>	</th>
+					<th class="table-header-repeat line-left minwidth-1"><a href="">Telefone</a></th>
+					<th class="table-header-repeat line-left minwidth-1"><a href="">Endereco</a></th>
+					<th class="table-header-repeat line-left minwidth-1"><a href="">Email</a></th>
+					<th class="table-header-repeat line-left minwidth-1"><a href="">Login</a></th>
 					<th class="table-header-options line-left"><a href="">Options</a></th>
 				</tr>
+				<c:forEach items="${usuarios}" var="usuario">
 				<tr>
 					<td><input  type="checkbox"/></td>
-					<td>Sabev</td>
-					<td>George</td>
-					<td><a href="">george@mainevent.co.za</a></td>
-					<td>R250</td>
-					<td><a href="">www.mainevent.co.za</a></td>
-					<td class="options-width">
-					<a href="" title="Edit" class="icon-1 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-2 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-3 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-4 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-5 info-tooltip"></a>
+                    <td><c:out value="${usuario.nome}" /></td>
+                    <td><c:out value="${usuario.telefone}" /></td>
+                    <td><c:out value="${usuario.endereco}" /></td>
+                    <td><c:out value="${usuario.email}" /></td>
+                    <td><c:out value="${usuario.login}" /></td>
+                    <td class="options-width">
+					<a href="UsuarioController.do?action=editar&usuarioId=<c:out value="${usuario.usuarioId }"/>" title="Editar" class="icon-1 info-tooltip"></a>
+					<a href="UsuarioController.do?action=deletar&usuarioId=<c:out value="${usuario.usuarioId }"/>" title="Excluir" class="icon-2 info-tooltip"></a>
 					</td>
 				</tr>
-				<tr class="alternate-row">
-					<td><input  type="checkbox"/></td>
-					<td>Sabev</td>
-					<td>George</td>
-					<td><a href="">george@mainevent.co.za</a></td>
-					<td>R250</td>
-					<td><a href="">www.mainevent.co.za</a></td>
-					<td class="options-width">
-					<a href="" title="Edit" class="icon-1 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-2 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-3 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-4 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-5 info-tooltip"></a>
-					</td>
-				</tr>
-				<tr>
-					<td><input  type="checkbox"/></td>
-					<td>Sabev</td>
-					<td>George</td>
-					<td><a href="">george@mainevent.co.za</a></td>
-					<td>R250</td>
-					<td><a href="">www.mainevent.co.za</a></td>
-					<td class="options-width">
-					<a href="" title="Edit" class="icon-1 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-2 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-3 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-4 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-5 info-tooltip"></a>
-					</td>
-				</tr>
-				<tr class="alternate-row">
-					<td><input  type="checkbox"/></td>
-					<td>Sabev</td>
-					<td>George</td>
-					<td><a href="">george@mainevent.co.za</a></td>
-					<td>R250</td>
-					<td><a href="">www.mainevent.co.za</a></td>
-					<td class="options-width">
-					<a href="" title="Edit" class="icon-1 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-2 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-3 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-4 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-5 info-tooltip"></a>
-					</td>
-				</tr>
-				<tr>
-					<td><input  type="checkbox"/></td>
-					<td>Sabev</td>
-					<td>George</td>
-					<td><a href="">george@mainevent.co.za</a></td>
-					<td>R250</td>
-					<td><a href="">www.mainevent.co.za</a></td>
-					<td class="options-width">
-					<a href="" title="Edit" class="icon-1 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-2 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-3 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-4 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-5 info-tooltip"></a>
-					</td>
-				</tr>
-				<tr class="alternate-row">
-					<td><input  type="checkbox"/></td>
-					<td>Sabev</td>
-					<td>George</td>
-					<td><a href="">george@mainevent.co.za</a></td>
-					<td>R250</td>
-					<td><a href="">www.mainevent.co.za</a></td>
-					<td class="options-width">
-					<a href="" title="Edit" class="icon-1 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-2 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-3 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-4 info-tooltip"></a>
-					<a href="" title="Edit" class="icon-5 info-tooltip"></a>
-					</td>
-				</tr>
+				</c:forEach>
 				</table>
 				<!--  end product-table................................... --> 
 				</form>
@@ -587,7 +433,6 @@ $(document).pngFix( );
 	<!--  start footer-left -->
 	<div id="footer-left">
 	
-	Admin Skin &copy; Copyright Internet Dreams Ltd. <span id="spanYear"></span> <a href="">www.netdreams.co.uk</a>. All rights reserved.</div>
 	<!--  end footer-left -->
 	<div class="clear">&nbsp;</div>
 </div>

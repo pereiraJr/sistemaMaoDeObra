@@ -262,84 +262,44 @@ $(document).pngFix( );
 		<div class="nav">
 		<div class="table">
 		
-		<ul class="select"><li><a href="#nogo"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Dashboard Details 1</a></li>
-				<li><a href="#nogo">Dashboard Details 2</a></li>
-				<li><a href="#nogo">Dashboard Details 3</a></li>
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
-		                    
+	           
 		<ul class="current"><li><a href="#nogo"><b>Products</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub show">
 			<ul class="sub">
 				<li><a href="AnuncioController.do?action=inserir">Inserir Anuncio</a></li>
-				<li class="sub_show"><a href="UsuarioController?action=listarUsuario">Ver todos os produtos</a></li>
+				<li class="sub_show"><a href="AnuncioController?action=listarAnuncio">Ver todos os anuncios</a></li>
 				<li><a href="AnuncioController.do?action=listarPorUsuario">Mostrar Meus anuncios</a></li>
+				<li><a href="UsuarioController?action=listarUsuario" >Painel Administrador</a></li>
 			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
 		
-		<ul class="select"><li><a href="#nogo"><b>Categories</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Categories Details 1</a></li>
-				<li><a href="#nogo">Categories Details 2</a></li>
-				<li><a href="#nogo">Categories Details 3</a></li>
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
-		
-		<ul class="select"><li><a href="#nogo"><b>Clients</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">Clients Details 1</a></li>
-				<li><a href="#nogo">Clients Details 2</a></li>
-				<li><a href="#nogo">Clients Details 3</a></li>
-			 
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="nav-divider">&nbsp;</div>
-		
-		<ul class="select"><li><a href="#nogo"><b>News</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="#nogo">News details 1</a></li>
-				<li><a href="#nogo">News details 2</a></li>
-				<li><a href="#nogo">News details 3</a></li>
-			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
 		
-		<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
-		</div>
+	</div>
 		<!--  start nav -->
 
 </div>
@@ -356,7 +316,7 @@ $(document).pngFix( );
 <div id="content">
 
 
-<div id="page-heading"><h1>Add product</h1></div>
+<div id="page-heading"><h1>Adicionar Anuncio</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -381,48 +341,39 @@ $(document).pngFix( );
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">Add product details</a></div>
+			<div class="step-dark-left"><a href="AnuncioController.do?action=listarPorUsuario">Meus Anuncios</a></div>
 			<div class="step-dark-right">&nbsp;</div>
 			<div class="clear"></div>
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
+		
+		
+		
 		<form action="AnuncioController.do" method="post">
-		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
-		<tr>	
-			<th valign="top">Product name:</th>
-			<td><input type="text" class="inp-form" /></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th valign="top">Titulo:</th>
-			<td><input type="text"
+        <fieldset>
+            <div>
+                <label for="anuncioId">ID Anuncio </label> <input class="inp-form" type="text"
+                    name="anuncioId" value="<c:out value="${anuncio.anuncioId}" />"
+                    readonly="readonly" placeholder="Anuncio ID" />
+            </div>
+            <div>
+                <label for="titulo">Titulo </label> <input class="inp-form" type="text"
                     name="titulo" value="<c:out value="${anuncio.titulo}" />"
-                class="inp-form"/></td>
-			<td>
-			<div class="error-left"></div>
-			<div class="error-inner">This field is required.</div>
-			</td>
-		</tr>
-		
-	<tr>
-		<th valign="top">Descrição:</th>
-		<td><textarea id='descricao' name='descricao'  rows="" cols="" class="form-textarea" 
-		id='descricao'><c:out value="${anuncio.descricao}" /></textarea></td>
-		<td></td>
-	</tr>
-	<tr>
-		<th>&nbsp;</th>
-		<td valign="top">
-			<input type="submit" value="" class="form-submit" />
-			<input type="reset" value="" class="form-reset"  />
-		</td>
-		<td></td>
-	</tr>
-	</table>
-	 </form>
-		
+                    placeholder="Titulo" />
+            </div>
+            <div>
+                <label for="descricao">Descricao</label> 
+                <textarea class="form-textarea" id='descricao' name='descricao' 
+                id='descricao'><c:out value="${anuncio.descricao}" /> </textarea> 
+            </div>
+            <div>
+                     <input type="submit" value="" class="form-submit" />
+                <input type="reset" value="" class="form-reset"  />
+            </div>
+        </fieldset>
+    </form>
 		
 	<!-- end id-form  -->
 
@@ -455,6 +406,20 @@ $(document).pngFix( );
 	<th class="sized bottomright"></th>
 </tr>
 </table>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
 
 <div class="clear">&nbsp;</div>
 

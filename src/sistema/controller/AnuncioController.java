@@ -20,7 +20,7 @@ public class AnuncioController extends HttpServlet{
 
 	private AnuncioDAO dao;
     private static final long serialVersionUID = 1L;
-    public static final String LISTAR_ANUNCIO = "/listaAnuncio.jsp";
+    public static final String LISTAR_ANUNCIO = "/todosAnuncios.jsp";
     public static final String INSERIR_OU_EDITAR = "/form.jsp";
     public static final String LISTAR_ANUNCIO_USUARIO = "/anuncioPorUsuario.jsp";
     public static final String LISTAR_ANUNCIO_POR_TITULO = "/anuncioPorTitulo.jsp";
@@ -59,7 +59,7 @@ public class AnuncioController extends HttpServlet{
             
         }
         else {
-            forward = LISTAR_ANUNCIO_USUARIO;
+            forward = LISTAR_ANUNCIO;
             request.setAttribute("anuncios", dao.listarTodosAnuncios() );
         }
         RequestDispatcher view = request.getRequestDispatcher( forward );

@@ -245,19 +245,6 @@ $(document).pngFix( );
 		<!--  start nav -->
 		<div class="nav">
 		<div class="table">
-		<ul class="current"><li><a href="#nogo"><b>Products</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub show">
-			<ul class="sub">
-				<li><a href="#nogo">View all products</a></li>
-				<li class="sub_show"><a href="#nogo">Add product</a></li>
-				<li><a href="#nogo">Delete products</a></li>
-			</ul>
-		</div>
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-		</li>
-		</ul>
-		
 		<div class="clear"></div>
 		</div>
 		<div class="clear"></div>
@@ -310,10 +297,10 @@ $(document).pngFix( );
 			<input type="submit">
 			</h2>
 			</form>
-			
-			<h2>
-			
-			</h2>
+			<br></br> <br></br>
+			<h1>
+			Deseja Criar uma Conta? <a href="/sistemaMaoDeObraWeb/login.jsp">Clique Aqui</a>
+			</h1>
 			
 			</div>
 			<!--  end table-content  -->
