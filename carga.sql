@@ -1,6 +1,6 @@
 create database projeto;
 use projeto; 
-
+#Just A test
 CREATE TABLE `usuario` (
  `usuarioId` int(5) NOT NULL AUTO_INCREMENT,
  `nome` varchar(40) DEFAULT NULL,
