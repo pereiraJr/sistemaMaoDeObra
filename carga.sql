@@ -13,7 +13,7 @@ CREATE TABLE `usuario` (
  PRIMARY KEY (`usuarioId`));
 
 GO
-
+blabla
 CREATE TABLE `anuncio` ( 
 `anuncioId` int(5) NOT NULL AUTO_INCREMENT,
 `titulo` varchar(30) DEFAULT NULL,
