@@ -11,7 +11,7 @@ CREATE TABLE `usuario` (
  `login` varchar(20) DEFAULT NULL,
  `senha` varchar(20) DEFAULT NULL,
  PRIMARY KEY (`usuarioId`));
-
+// Mais um test
 GO
 blabla
 CREATE TABLE `anuncio` ( 
