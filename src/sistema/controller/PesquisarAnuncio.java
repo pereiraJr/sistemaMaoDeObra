@@ -36,15 +36,15 @@ public class PesquisarAnuncio extends HttpServlet {
         String titulo = request.getParameter("titulo");
         anuncio = PesquisarAnuncioPorTituloDAO.anuncioPorTitulo(titulo);
         
-        if(anuncio != null)
-        {
-        	response.sendRedirect("anuncioPorTitulo.jsp");
-        	HttpSession sessao = request.getSession();
-            sessao.setAttribute("sessaoAnuncio",anuncio);
-        }
-        else
-        {
-        	response.sendRedirect("404.jsp");
-        }
+//        if(anuncio != null)
+//        {
+//        	response.sendRedirect("anuncioPorTitulo.jsp");
+//        	HttpSession sessao = request.getSession();
+//            sessao.setAttribute("sessaoAnuncio",anuncio);
+//        }
+//        else
+//        {
+//        	response.sendRedirect("404.jsp");
+//        }
     }  
 }
